@@ -7,13 +7,14 @@
   <style>
     * {
       scroll-behavior: smooth;
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #000, #0d0d0d);
-      color: #ccc;
+      background: #000;
+      color: #eee;
     }
 
     header {
@@ -21,16 +22,16 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: linear-gradient(to right, #000, #1a001a);
+      background: #111;
       display: flex;
       justify-content: center;
       padding: 15px;
       z-index: 10;
-      box-shadow: 0 4px 10px rgba(162, 89, 255, 0.2);
+      box-shadow: 0 4px 10px rgba(196, 196, 196, 0.1);
     }
 
     header a {
-      color: #ccc;
+      color: #fff;
       text-decoration: none;
       margin: 0 20px;
       font-weight: bold;
@@ -40,13 +41,13 @@
     }
 
     header a:hover {
-      background: #a259ff;
+      background: #fff;
       color: #000;
     }
 
     .hero {
       height: 100vh;
-      background: url('https://moewalls.com/wp-content/uploads/2025/02/night-city-pixel-thumb-728x410.jpg') no-repeat center center/cover;
+      background: url('https://i.gifer.com/Cal.gif') no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -54,23 +55,13 @@
       position: relative;
     }
 
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 150px;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
-    }
-
     .hero h1 {
-      color: #a259ff;
+      color: #f0f0f0;
       font-size: 5em;
-      text-shadow: 0 0 10px #a259ff, 0 0 20px #a259ff;
+      text-shadow: 0 0 10px #888, 0 0 20px #444;
       animation: floatText 3s ease-in-out infinite;
-      z-index: 1;
       position: relative;
+      z-index: 1;
     }
 
     @keyframes floatText {
@@ -79,121 +70,91 @@
     }
 
     .content-section {
-      padding: 100px 40px;
+      padding: 100px 20px 60px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
-      opacity: 0;
-      transform: translateY(50px);
-      animation: fadeUp 1s forwards;
-      animation-delay: 0.5s;
+      justify-content: center;
+      gap: 40px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     .about-text {
-      flex: 1;
-      max-width: 600px;
-      color: #ccc;
-      box-shadow: 0 0 20px rgba(162, 89, 255, 0.2);
+      flex: 1 1 500px;
+      color: #eee;
       padding: 20px;
       border-radius: 10px;
-      background-color: rgba(20, 20, 20, 0.6);
+      background-color: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     }
 
     .about-image {
-      flex-shrink: 0;
-      width: 350px;
-      height: 350px;
-      border-radius: 15px;
-      background-color: #222;
-      border: 2px solid #444;
+      flex: 1 1 350px;
+      max-width: 400px;
+      height: 100%;
+      min-height: 350px;
       background-size: cover;
       background-position: center;
-      box-shadow: 0 0 25px rgba(162, 89, 255, 0.4);
-    }
-
-    .social-section {
-      padding: 60px 20px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .social-box {
-      width: 300px;
-      background-color: #111;
       border-radius: 10px;
-      overflow: hidden;
-      border: 2px solid #444;
-      position: relative;
+      background-color: #222;
+    }
+
+    @media (max-width: 768px) {
+      .content-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      .about-image {
+        width: 100%;
+        height: 300px;
+        max-width: 90%;
+      }
+    }
+
+    /* NOVA SEÇÃO: O que faço */
+    .skills-section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .skills-section h2 {
       text-align: center;
-      box-shadow: 0 0 15px rgba(162, 89, 255, 0.4);
-      transition: transform 0.4s;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color: #eee;
     }
 
-    .social-box:hover {
-      transform: translateY(-10px);
-    }
-
-    .social-background {
-      height: 150px;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .social-profile {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 3px solid #a259ff;
-      position: absolute;
-      top: 110px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #000;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .social-content {
-      margin-top: 60px;
+    .skill-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      background-color: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
       padding: 20px;
+      border-radius: 10px;
     }
 
-    .social-button {
-      background-color: #a259ff;
-      border: none;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      margin-top: 10px;
-      transition: background 0.3s;
+    .skill-item img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      margin-right: 20px;
+      border-radius: 8px;
     }
 
-    .social-button:hover {
-      background-color: #8e3ce8;
+    .skill-item p {
+      margin: 0;
+      color: #ccc;
+      font-size: 1.1em;
     }
 
     footer {
       text-align: center;
-      padding: 10px 10px;
+      padding: 0;
       background-color: #0a0a0a;
       border-top: 2px solid #222;
-      box-shadow: 0 -4px 10px rgba(162, 89, 255, 0.2);
       font-size: 14px;
-      margin-top: 80px;
     }
 
     footer img {
@@ -204,10 +165,10 @@
   </style>
 </head>
 <body>
+
   <header>
-    <a href="#inicio">Início</a>
-    <a href="#sobre">Sobre Mim</a>
-    <a href="#redes">Redes Sociais</a>
+    <a href="index.html">Início</a>
+    <a href="redes.html">Redes Sociais</a>
   </header>
 
   <section id="inicio" class="hero">
@@ -217,45 +178,35 @@
   <section id="sobre" class="content-section">
     <div class="about-text">
       <h2>Sobre Mim</h2>
-      <p>Olá! O meu nome é Escuro e sou apaixonado por programação. Já fiz parte da staff da comunidade P7dro "no antigo testamento" em uma fase em que aprendi muito sobre gestão, bots e comunidades online.</p>
-      <p>Atualmente, estou focado em evoluir como programador, explorando linguagens como HTML, Java e Python. Gosto de criar projetos por diversão e aprender enquanto coloco ideias em prática, como o que estás a ver neste site!</p>
-      <p>Abaixo, podes encontrar as minhas redes sociais e servidores. Fica à vontade para explorar!</p>
+      <p>teste</p>
+      <p>teste</p>
+      <p>teste</p>
     </div>
-    <div class="about-image" style="background-image: url('https://i.pinimg.com/736x/04/55/41/045541b0d637185ee1b81d242b7accac.jpg');"></div>
+    <div class="about-image" style="background-image: url('https://wallpapers.com/images/hd/dark-pixel-pehrx5gesh6evjrj.jpg');"></div>
   </section>
 
-  <section id="redes" class="social-section">
-    <div class="social-box">
-      <div class="social-background" style="background-image: url('https://i.pinimg.com/736x/e9/3b/cb/e93bcb2830e1823076530037e41d20f0.jpg');"></div>
-      <div class="social-profile" style="background-image: url('https://wallpapercave.com/wp/wp8761746.jpg');"></div>
-      <div class="social-content">
-        <h3>Discord</h3>
-        <a href="Discord.html" class="social-button">Acessar</a>
-      </div>
+  <!-- NOVA ÁREA COM RETÂNGULOS -->
+  <section class="skills-section">
+    <h2>O que já fiz</h2>
+
+    <div class="skill-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Admin">
+      <p>teste</p>
     </div>
 
-    <div class="social-box">
-      <div class="social-background" style="background-image: url('https://i.pinimg.com/736x/cd/30/21/cd302136cffd090cc2ae22e88f5ca276.jpg');"></div>
-      <div class="social-profile" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8dea8d27-a9ef-4484-9c20-51f212ebe10f/dd65tbb-545c4f6d-1c6a-4b6f-a19e-499d41142d7d.png/v1/fill/w_894,h_894,q_70,strp/youtube_logo_black_by_revydubz_dd65tbb-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAwMCIsInBhdGgiOiJcL2ZcLzhkZWE4ZDI3LWE5ZWYtNDQ4NC05YzIwLTUxZjIxMmViZTEwZlwvZGQ2NXRiYi01NDVjNGY2ZC0xYzZhLTRiNmYtYTE5ZS00OTlkNDExNDJkN2QucG5nIiwid2lkdGgiOiI8PTEwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.s8hGNAjaDb77znDop-F-G22liMVttQDeOOXZi1lcxsM');"></div>
-      <div class="social-content">
-        <h3>YouTube</h3>
-        <a href="Youtube.html"class="social-button">Acessar</a>
-      </div>
+    <div class="skill-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Mod">
+      <p>teste</p>
     </div>
 
-    <div class="social-box">
-      <div class="social-background" style="background-image: url('https://i.pinimg.com/736x/2f/82/6e/2f826e6374597929aa654aadbc166208.jpg');"></div>
-      <div class="social-profile" style="background-image: url('https://i.pinimg.com/originals/ac/b3/51/acb3513e5a2664ba59bec11222863a40.jpg');"></div>
-      <div class="social-content">
-        <h3>GitHub</h3>
-        <a href="Github.html" class="social-button">Acessar</a>
-      </div>
+    <div class="skill-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Dev">
+      <p>teste</p>
     </div>
   </section>
 
   <footer>
-    <p>Obrigado por visitares o meu site! :)</p>
-    <img src="https://emoji.discadia.com/emojis/0fac9b25-753b-44ae-ac04-608ce5bfc04b.GIF" alt="Logo ou ícone final">
+    <p>Veja as redes sociais também :)</p>
   </footer>
 </body>
 </html>
