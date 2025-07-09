@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escuro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html">Início</a>
+  </header>
+
+  <section id="inicio" class="hero">
+    <h1>Redes Sociais</h1>
+  </section>
+
+  <!-- ------------------ SEÇÃO: REDES SOCIAIS ------------------ -->
+  <section class="social-full-section">
+
+    <!-- CARD 1 -->
+    <div class="social-card" style="background-image: url('https://c.wallhere.com/photos/21/e6/The_Eminence_in_Shadow_Shadow_Garden_anime_girls_anime_elves_POV_Alpha_Natsume_Beta-2288884.jpg!d');">
+      <div class="social-left"></div>
+      <div class="social-gradient"></div>
+      <div class="social-right">
+        <h3>Garden of Darkness</h3>
+        <div class="social-profile" style="background-image: url('https://i.pinimg.com/736x/50/fb/cd/50fbcda1d83e4a9af2684d2f1af7b8de.jpg');"></div>
+        <a href="Discord.html" class="social-button">Acessar</a>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="social-card" style="background-image: url('https://i.pinimg.com/736x/1c/92/3d/1c923d1a836472f7929db0142fd2912c.jpg');">
+      <div class="social-left"></div>
+      <div class="social-gradient"></div>
+      <div class="social-right">
+        <h3>YouTube</h3>
+        <div class="social-profile" style="background-image: url('https://i.pinimg.com/736x/fc/bf/bc/fcbfbc56928955d093c4e8ec779c3ff5.jpg');"></div>
+        <a href="Youtube.html" class="social-button">Entrar</a>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="social-card" style="background-image: url('https://i.pinimg.com/736x/f1/8e/73/f18e73f48168d28fb953124fedcc9e3f.jpg');">
+      <div class="social-left"></div>
+      <div class="social-gradient"></div>
+      <div class="social-right">
+        <h3>GitHub</h3>
+        <div class="social-profile" style="background-image: url('https://avatars.githubusercontent.com/u/20014732?s=280&v=4');"></div>
+        <a href="Github.html" class="social-button">Participar</a>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="social-card" style="background-image: url('https://wallpapercrafter.com/desktop/103240-fantasy-art-cityscape-fantasy-city-artwork.jpg');">
+      <div class="social-left"></div>
+      <div class="social-gradient"></div>
+      <div class="social-right">
+        <h3>Roblox</h3>
+        <div class="social-profile" style="background-image: url('https://i.pinimg.com/736x/ca/a7/10/caa710ac2cdca39221f3773d78386a30.jpg');"></div>
+        <a href="#" class="social-button">Visitar</a>
+      </div>
+    </div>
+
+    <div style="height: 100px;"></div>
+  </section>
+
+  <footer>
+    <p>Veja as redes sociais também :)</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-slide-in');
+        } else {
+          entry.target.classList.remove('animate-slide-in');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('.social-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+
+</body>
+</html>
