@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roblox Escuro</title>
+  <style>
+    * {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #000, #0d0d0d);
+      color: #ccc;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(to right, #000, #1a001a);
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(214, 214, 214, 0.448);
+    }
+
+    header a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header a:hover {
+      background: #c6c6c6;
+      color: #000;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://i.pinimg.com/736x/ba/85/57/ba85574a0e08ba951adf42afd14c6b69.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0), #000);
+    }
+
+    .hero h1 {
+      color: #d5d5d5;
+      font-size: 4em;
+      text-shadow: 0 0 10px #a5a5a5, 0 0 20px #7c7c7c;
+      animation: floatText 3s ease-in-out infinite;
+      z-index: 1;
+      position: relative;
+    }
+
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .content {
+      padding: 100px 40px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .info-box {
+      display: flex;
+      background-color: rgba(20, 20, 20, 0.6);
+      border: 2px solid #d1d1d1c8;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 20px rgba(215, 215, 215, 0.308);
+      gap: 30px;
+      align-items: center;
+    }
+
+    .info-box img {
+      width: 280px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(104, 255, 217, 0.3);
+    }
+
+    .info-box .text {
+      flex: 1;
+    }
+
+    .info-box h2 {
+      color: #5ef5f5;
+      margin-bottom: 10px;
+    }
+
+    .roblox-button {
+      background-color: #5ea5f0;
+      color: white;
+      padding: 14px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 0 20px rgba(149, 237, 234, 0.4);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .roblox-button:hover {
+      background-color: #0b117d;
+      box-shadow: 0 0 20px rgba(0, 17, 143, 0.4);
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 0px;
+      background-color: #0a0a0a;
+      border-top: 2px solid #222;
+      box-shadow: 0 -4px 10px rgba(200, 200, 200, 0.317);
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .info-box {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">Início</a>
+    <a href="redes.html">Redes Sociais</a>
+  </header>
+
+  <section class="hero">
+    <h1>Roblox</h1>
+  </section>
+
+  <section id="perfil" class="content">
+    <div class="info-box">
+      <img src="https://tr.rbxcdn.com/30DAY-Avatar-D7001FC4FF1609183F107D5D0A9933A0-Png/352/352/Avatar/Webp/noFilter" alt="Avatar Roblox">
+      <div class="text">
+        <h2>Sobre o Meu Perfil</h2>
+        <p>O meu nickname é <strong>Escuro</strong>, Jogo principalmente jogos de aventura, rpg e animes, Gosto de fazer varias coisas dentro do roblox e sempre sou ativo, é gosto de conhecer e descobrir jogos novos.</p>
+        <a href="https://www.roblox.com/pt/users/156946652/profile" target="_blank" class="roblox-button">Ver Perfil no Roblox</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="comunidade" class="content">
+    <div class="info-box">
+      <img src="https://frierenplush.com/wp-content/uploads/2024/01/Frieren-Plush.png" alt="Comunidade Roblox">
+      <div class="text">
+        <h2>Sobre a Comunidade</h2>
+        <p>Minha comunidade no Roblox para fins de doação e utilidade própria, no futuro pode haver eventos mas por enquanto ainda não.</p>
+        <a href="https://www.roblox.com/pt/communities/35922161/Garden-of-the-Dark-Realm" target="_blank" class="roblox-button">Visite a comunidade</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Website Roblox feito por <strong>Escuro</strong></p>
+  </footer>
+
+</body>
+</html>
